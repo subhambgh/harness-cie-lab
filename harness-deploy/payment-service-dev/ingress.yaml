@@ -16,14 +16,16 @@ spec:
   {{- else }}
   - host: cie-bootcamp.co.uk
   {{- end }}
-    http:
+  - http:
      paths:
-     - backend:
-       {{- if lower .Values.sename}}
+       - path:
+         pathType: Prefix
+         backend:
+        {{- if lower .Values.sename}}
           service:
             name: payment-service-{{ lower .Values.sename }}-svc
-       {{- else }}
+        {{- else }}
             name: payment-service-svc
-       {{- end }}
+        {{- end }}
             port:
               number: 8080
