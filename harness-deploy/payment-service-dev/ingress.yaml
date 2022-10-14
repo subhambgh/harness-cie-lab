@@ -20,8 +20,10 @@ spec:
      paths:
      - backend:
        {{- if lower .Values.sename}}
-          serviceName: payment-service-{{ lower .Values.sename }}-svc
+          service:
+            name: payment-service-{{ lower .Values.sename }}-svc
        {{- else }}
-          serviceName: payment-service-svc
+            name: payment-service-svc
        {{- end }}
-          servicePort: 8080
+            port:
+              number: 8080
