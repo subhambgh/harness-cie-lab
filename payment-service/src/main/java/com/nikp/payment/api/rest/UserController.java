@@ -36,7 +36,7 @@ public class UserController {
     userService.insert(new User("T1", "m@m.pl"));
     userService.insert(new User("T2", "m2@m.pl"));
     userService.insert(new User("T3", "m3@m.pl"));
-    userService.insert(new User(app_property, "m3@m.pl"));
+    userService.insert(new User(user4, "m3@m.pl"));
   }
 
   @Autowired
