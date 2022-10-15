@@ -27,11 +27,15 @@ public class UserController {
 
   private final UserService userService;
 
+  @Value("${harness.user4}")
+  private String user4;
+
   @PostConstruct
   public void insertUsers() {
     userService.insert(new User("T1", "m@m.pl"));
     userService.insert(new User("T2", "m2@m.pl"));
     userService.insert(new User("T3", "m3@m.pl"));
+    userService.insert(new User(app_property, "m3@m.pl"));
   }
 
   @Autowired

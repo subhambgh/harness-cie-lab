@@ -22,3 +22,4 @@ harness:
   build: ${HARNESS_BUILD:1}
   api:
     key: ${HARNESS_FF_KEY:1260ecd9-0af2-43d0-98f6-06570bb13a00}
+  user4: ${USER4:T}
